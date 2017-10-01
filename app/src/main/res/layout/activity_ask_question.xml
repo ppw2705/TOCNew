@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <!-- Your normal content view -->
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- We use a Toolbar so that our drawer can be displayed
+             in front of the action bar -->
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags = "scroll"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/my_awesome_toolbar"
+                android:layout_width="match_parent"
+                android:titleTextColor="@color/white"
+                app:title="@string/app_name"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/titlebar_color">
+
+                <include layout="@layout/toolbar_layout_two" />
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+        <!-- The rest of your content view -->
+        <android.support.v4.widget.NestedScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context=".ui.AskQuestionActivity">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ASK A QUESTION / GIVE YOUR COMMENTS"
+                    android:textColor="@color/event_link"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:id="@+id/txt_title" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Please type your question or comments below. Responses may be submitted anonymously if preferred. You may set your remarks to a specific speaker or for the whole panel, please specify."
+                    android:textColor="#0060AA"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:id="@+id/txt_title2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="We will address as many questions as possible."
+                    android:textColor="#5B5B5B"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:id="@+id/txt_desc" />
+
+                <EditText
+                    android:id="@+id/edt_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/cir_fin"
+                    android:layout_marginTop="10dp"
+                    android:padding="@dimen/_5dp"
+                    android:hint="Name"
+                    android:textSize="15sp" />
+                <EditText
+                    android:id="@+id/edt_surname"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/cir_fin"
+                    android:layout_marginTop="10dp"
+                    android:padding="@dimen/_5dp"
+                    android:hint="Surname*"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+                <EditText
+                    android:id="@+id/edt_company_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/cir_fin"
+                    android:layout_marginTop="10dp"
+                    android:padding="@dimen/_5dp"
+                    android:hint="Job title &amp; Company"
+                    android:textSize="15sp" />
+                <EditText
+                    android:id="@+id/edt_session"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cir_fin"
+                    android:layout_marginTop="10dp"
+                    android:padding="@dimen/_5dp"
+                    android:hint="Session*"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/edt_session_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/cir_fin"
+                    android:layout_marginTop="10dp"
+                    android:padding="@dimen/_5dp"
+                    android:hint="Session*"
+                    android:visibility="gone"
+                    android:textSize="15sp" />
+                <EditText
+                    android:id="@+id/edt_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/cir_fin"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+                    android:hint="Your question or comments*"
+                    android:gravity="left"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#F9AA00"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="Submit"
+                    />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_main" />
+</android.support.v4.widget.DrawerLayout>
+
+

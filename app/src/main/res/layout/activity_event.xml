@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <!-- Your normal content view -->
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- We use a Toolbar so that our drawer can be displayed
+             in front of the action bar -->
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags = "scroll"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/my_awesome_toolbar"
+                android:layout_width="match_parent"
+                android:titleTextColor="@color/white"
+                app:title="@string/app_name"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/titlebar_color">
+
+                <include layout="@layout/toolbar_layout" />
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+        <!-- The rest of your content view -->
+        <android.support.v4.widget.NestedScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context=".ui.EventActivity">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:background="@color/titlebar_color">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/rel_icon">
+
+
+                        <ImageView
+                            android:id="@+id/img_logo"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:src="@drawable/toc_asia"
+                            android:layout_marginTop="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            />
+
+                        <ImageView
+                            android:layout_alignBottom="@+id/img_logo"
+                            android:layout_alignRight="@+id/img_logo"
+                            android:id="@+id/img_info"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/info_new"
+                            android:layout_marginTop="10dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_logo"
+                            android:text="The Pan Asia event for people who own, move &amp; handle containerised cargo"
+                            android:textSize="11sp"
+                            android:textColor="@color/white"
+                            android:id="@+id/txt_asia_ttl"
+                            android:textAlignment="center"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="@dimen/_5dp"
+                            android:padding="3dp"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_asia_ttl"
+                            android:text="25 - 26 April 2017"
+                            android:textAllCaps="true"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            android:id="@+id/txt_asia_date"
+                            android:textAlignment="center"
+                            android:layout_marginTop="@dimen/_5dp"
+                            android:textStyle="bold"
+                            android:visibility="gone"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                        android:id="@+id/ll_links"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/row1"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/rel_con_agenda"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp">
+
+                                <ImageView
+                                    android:id="@+id/img_con_agenda"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/conference_agenda"/>
+
+                                <TextView
+                                    android:id="@+id/txt_con_agenda"
+                                    android:layout_below="@+id/img_con_agenda"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:text="CONFERENCE AGENDA"
+                                    android:paddingTop="5dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:textIsSelectable="false" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:background="#DEDEDE" />
+
+                            <RelativeLayout
+                                android:id="@+id/rel_speaker_info"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp">
+
+                                <ImageView
+                                    android:id="@+id/img_speaker_info"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/speaker_info_new"/>
+
+                                <TextView
+                                    android:id="@+id/txt_speaker_info"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/img_speaker_info"
+                                    android:gravity="center_horizontal"
+                                    android:lines="1"
+                                    android:maxLines="1"
+                                    android:paddingTop="5dp"
+                                    android:text="SPEAKERS"
+                                    android:textColor="@color/black"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:textIsSelectable="false" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:background="#DEDEDE" />
+
+                            <RelativeLayout
+                                android:id="@+id/rel_survey"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp">
+
+                                <ImageView
+                                    android:id="@+id/img_survey"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/survey"/>
+
+                                <TextView
+                                    android:id="@+id/txt_survey"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/img_survey"
+                                    android:gravity="center_horizontal"
+                                    android:lines="1"
+                                    android:maxLines="1"
+                                    android:paddingTop="5dp"
+                                    android:text="POLLS"
+                                    android:textColor="@color/black"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:textIsSelectable="false" />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="#DEDEDE" />
+
+                        <LinearLayout
+                            android:id="@+id/row2"
+                            android:layout_below="@+id/row1"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/rel_contact_us"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp">
+
+                                <ImageView
+                                    android:id="@+id/img_contact_us"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/exhibitors_ico" />
+
+                                <TextView
+                                    android:id="@+id/txt_contact_us"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/img_contact_us"
+                                    android:gravity="center_horizontal"
+                                    android:lines="1"
+                                    android:maxLines="1"
+                                    android:paddingTop="5dp"
+                                    android:text="EXHIBITORS"
+                                    android:textColor="@color/black"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:textIsSelectable="false" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:background="#DEDEDE" />
+
+                            <RelativeLayout
+                                android:id="@+id/rel_floorplan"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp">
+
+                                <ImageView
+                                    android:id="@+id/img_floorplan"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/floorplan" />
+
+                                <TextView
+                                    android:id="@+id/txt_floorplan"
+                                    android:layout_below="@+id/img_floorplan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:lines="1"
+                                    android:maxLines="1"
+                                    android:paddingTop="5dp"
+                                    android:text="FLOORPLAN"
+                                    android:textColor="@color/black"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:textIsSelectable="false" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:background="#DEDEDE" />
+
+
+                            <RelativeLayout
+                                android:id="@+id/rel_venue_info"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp">
+
+                                <ImageView
+                                    android:id="@+id/img_venue_info"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/faq_ico_circ"/>
+
+                                <TextView
+                                    android:id="@+id/txt_venue_info"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/img_venue_info"
+                                    android:gravity="center_horizontal"
+                                    android:lines="1"
+                                    android:maxLines="1"
+                                    android:paddingTop="5dp"
+                                    android:text="INFORMATION"
+                                    android:textColor="@color/black"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:textIsSelectable="false" />
+
+                            </RelativeLayout>
+
+
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="#DEDEDE" />
+
+                        <!--<LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:src="@drawable/img4"
+                                />
+                        </LinearLayout-->
+                        <com.daimajia.slider.library.SliderLayout
+                        android:id="@+id/slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        custom:auto_cycle="false"
+                        custom:indicator_visibility="visible"
+                        custom:pager_animation="Accordion"
+                        custom:pager_animation_span="0" />
+
+                        <LinearLayout
+                            android:id="@+id/row3"
+                            android:layout_below="@+id/row2"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/twitter"
+                                android:id="@+id/tweet"
+                                android:layout_marginRight="25dp"
+                                android:onClick="web_view"
+                                />
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/flicker"
+                                android:visibility="gone"
+                                android:layout_marginRight="25dp"/>
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/linkedin_o"
+                                android:id="@+id/linkedin"
+                                android:onClick="web_view"
+                                android:layout_marginRight="25dp"/>
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:id="@+id/youtube"
+                                android:onClick="web_view"
+                                android:src="@drawable/youtube"/>
+                         </LinearLayout>
+
+                    </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_main" />
+</android.support.v4.widget.DrawerLayout>

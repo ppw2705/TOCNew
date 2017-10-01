@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/background_border_blue"
+    android:layout_marginBottom="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rel_exhibitor"
+        android:background="?android:attr/selectableItemBackground">
+    <ImageView
+        android:id="@+id/exhibitor_imgView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/star"
+        android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/txt_exhibitor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/exhibitor_imgView"
+            android:text="1 Stop Nature"
+            android:lines="1"
+            android:textColor="#005AAD"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:id="@+id/rel_stand"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_toRightOf="@id/exhibitor_imgView"
+        android:layout_below="@+id/txt_exhibitor_name"
+        android:background="#A1A1A1">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            app:srcCompat="@drawable/ex_arrow" />
+
+        <TextView
+            android:id="@+id/txt_ex_stand"
+            android:layout_width="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@id/imageView4"
+            android:layout_centerInParent="true"
+            android:text="C 27"
+            android:textSize="12sp"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rel_sponsor"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_toRightOf="@id/rel_stand"
+            android:layout_below="@+id/txt_exhibitor_name"
+            android:background="#005AAD">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"
+                android:text="SPONSOR"
+                android:textSize="12sp"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/remove_imgView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/delete"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

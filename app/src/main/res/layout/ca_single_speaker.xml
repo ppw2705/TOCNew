@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="100dp"
+    android:layout_height="125dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:id="@+id/lin_single_speaker">
+    <com.geecon.toc.views.CircularImageView
+        android:id="@+id/speaker_imv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/pro_circle"
+        app:civ_shadow="true"
+        app:civ_shadowColor="#D8D8D8"
+        app:civ_shadowDx="3"
+        app:civ_shadowDy="3"
+        android:layout_gravity="center_horizontal" />
+    <TextView
+        android:layout_marginTop="@dimen/_5dp"
+        android:id="@+id/speaker_name"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Racheal White"
+        android:singleLine="false"
+        android:lines="3"
+        android:textColor="@color/titlebar_color"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textAlignment="center" />
+</LinearLayout>

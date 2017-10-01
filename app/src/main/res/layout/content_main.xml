@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.MainActivity">
+    <LinearLayout
+        android:id="@+id/rel_actual_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="5dp">
+
+    <RelativeLayout
+        android:id="@+id/top_part"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:background="@color/titlebar_color">
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="6dp"
+                android:src="@drawable/globe"
+                android:elevation="@dimen/_5dp"/>
+
+        <com.geecon.toc.views.TypeWriter
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_logo"
+            android:layout_centerHorizontal="true"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="20dp" />
+    </RelativeLayout>
+
+
+        <RelativeLayout
+        android:id="@+id/mybutton"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="-20dp"
+        android:layout_alignTop="@id/top_part"
+        android:layout_alignLeft="@id/top_part">
+        <TextView
+            android:elevation="5dp"
+            android:id="@+id/image"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_height="40dp"
+            android:layout_width="150dp"
+            android:background="@drawable/circular_border"
+            android:text="HOME"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+            android:id="@+id/bottom_part"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/rel_toc_america"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:onClick="web_view_click"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:padding="10dp"
+                android:src="@drawable/toc_americas_new" />
+        </RelativeLayout>
+
+            <LinearLayout
+                android:layout_below="@+id/rel_toc_america"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/img_asia"
+                    android:layout_width="0dp"
+                    android:layout_weight="35"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/toc_asia_n"
+                    android:elevation="5dp" />
+
+                <ImageView
+                    android:id="@+id/img_europe"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="35"
+                    android:elevation="5dp"
+                    android:onClick="web_view_click"
+                    android:src="@drawable/ico_e" />
+                <ImageView
+                    android:id="@+id/img_africa"
+                    android:layout_width="0dp"
+                    android:layout_weight="35"
+                    android:layout_height="match_parent"
+                    android:onClick="web_view_click"
+                    android:src="@drawable/ico_af"
+                    android:elevation="5dp" />
+            </LinearLayout>
+
+</RelativeLayout>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

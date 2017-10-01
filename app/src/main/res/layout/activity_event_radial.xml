@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <!-- Your normal content view -->
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- We use a Toolbar so that our drawer can be displayed
+             in front of the action bar -->
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags = "scroll"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/my_awesome_toolbar"
+                android:layout_width="match_parent"
+                android:titleTextColor="@color/white"
+                app:title="@string/app_name"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/titlebar_color">
+
+                <include layout="@layout/toolbar_layout" />
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+        <!-- The rest of your content view -->
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context=".ui.EventRadialActivity">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_links"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        android:background="#064F8A">
+                        <ImageView
+                            android:layout_width="400dp"
+                            android:layout_marginTop="@dimen/_50dp"
+                            android:layout_height="300dp"
+                            android:src="@drawable/new_radial_circ"
+                            android:layout_marginLeft="-150dp"
+                            />
+                        <RelativeLayout
+                            android:id="@+id/rel_con_agenda"
+                            android:layout_marginLeft="-30dp"
+                            android:layout_marginStart="-30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible">
+                            <ImageView
+                                android:id="@+id/img_con_agenda"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:scaleType="fitXY"
+                                android:textSize="30sp"
+                                android:background="@null"
+                                android:src="@drawable/conference_agenda"
+                                android:textStyle="bold"
+                                android:visibility="visible"/>
+                            <TextView
+                                android:id="@+id/txt_con_agenda"
+                                android:layout_toEndOf="@+id/img_con_agenda"
+                                android:layout_toRightOf="@+id/img_con_agenda"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginStart="20dp"
+                                android:textSize="16sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:textColor="@android:color/white"
+                                android:textStyle="bold"
+                                android:text="CONFERENCE\nAGENDA"
+                                android:visibility="visible"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rel_speaker_info"
+                            android:layout_marginLeft="-30dp"
+                            android:layout_marginStart="-30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/img_speaker_info"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:scaleType="fitXY"
+                                android:textSize="30sp"
+                                android:background="@null"
+                                android:src="@drawable/speaker_info_new"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:id="@+id/txt_speaker_info"
+                                android:layout_toEndOf="@+id/img_speaker_info"
+                                android:layout_toRightOf="@+id/img_speaker_info"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginStart="20dp"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/white"
+                                android:layout_centerVertical="true"
+                                android:textStyle="bold"
+                                android:text="SPEAKERS"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rel_survey"
+                            android:layout_marginLeft="-30dp"
+                            android:layout_marginStart="-30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/img_survey"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:scaleType="fitXY"
+                                android:background="@null"
+                                android:textSize="30sp"
+                                android:src="@drawable/survey"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:id="@+id/txt_survey"
+                                android:layout_toEndOf="@+id/img_survey"
+                                android:layout_toRightOf="@+id/img_survey"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginStart="20dp"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/white"
+                                android:textStyle="bold"
+                                android:text="POLLS"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rel_venue_info"
+                            android:layout_marginLeft="-30dp"
+                            android:layout_marginStart="-30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/img_venue_info"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:scaleType="fitXY"
+                                android:background="@null"
+                                android:textSize="30sp"
+                                android:src="@drawable/faq_ico_circ"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:id="@+id/txt_venue_info"
+                                android:layout_toEndOf="@+id/img_venue_info"
+                                android:layout_toRightOf="@+id/img_venue_info"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginStart="20dp"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/white"
+                                android:layout_centerVertical="true"
+                                android:text="INFORMATION"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rel_floorplan"
+                            android:layout_marginLeft="-30dp"
+                            android:layout_marginStart="-30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/img_floorplan"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:scaleType="fitXY"
+                                android:textSize="30sp"
+                                android:src="@drawable/floorplan"
+                                android:background="@null"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/txt_floorplan"
+                                android:layout_toEndOf="@+id/img_floorplan"
+                                android:layout_toRightOf="@+id/img_floorplan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginStart="20dp"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/white"
+                                android:layout_centerVertical="true"
+                                android:text="FLOORPLAN"/>
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/img_logo"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="-20dp"
+                            android:layout_marginStart="-20dp"
+                            android:scaleType="fitXY"
+                            android:background="@null"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/toc_asia"
+                            android:textStyle="bold"/>
+                        <ImageView
+                            android:layout_alignBottom="@+id/img_logo"
+                            android:layout_alignRight="@+id/img_logo"
+                            android:id="@+id/img_info"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/info_new"
+                            android:layout_marginTop="10dp" />
+                    </RelativeLayout>
+                    <!--<LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:src="@drawable/img4"
+                            />
+                    </LinearLayout-->
+                    <com.daimajia.slider.library.SliderLayout
+                        android:id="@+id/slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        custom:auto_cycle="false"
+                        custom:indicator_visibility="visible"
+                        custom:pager_animation="Accordion"
+                        custom:pager_animation_span="0" />
+
+                    <LinearLayout
+                        android:id="@+id/row3"
+                        android:layout_below="@+id/row2"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/twitter"
+                            android:id="@+id/tweet"
+                            android:layout_marginRight="25dp"
+                            android:onClick="web_view"
+                            />
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/flicker"
+                            android:visibility="gone"
+                            android:layout_marginRight="25dp"/>
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/linkedin_o"
+                            android:id="@+id/linkedin"
+                            android:onClick="web_view"
+                            android:layout_marginRight="25dp"/>
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:id="@+id/youtube"
+                            android:onClick="web_view"
+                            android:src="@drawable/youtube"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_main" />
+</android.support.v4.widget.DrawerLayout>

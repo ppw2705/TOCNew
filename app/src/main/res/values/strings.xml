@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TOC</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="no_result">No Results</string>
+    <string name="title_activity_informaton_page">INFORMATION</string>
+    <string name="no_network_toast">No Internet Connection</string>
+    <string name="app_new_name">TOC Events</string>
+</resources>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.CardView
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cards_cl"
+        android:background="@drawable/background_border_blue"
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/rlt_prod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/speaker_image"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/pro"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:id="@+id/lin_head"
+                android:layout_below="@+id/speaker_image"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/lin_text"
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical"
+                    android:layout_height="70dp"
+                    android:paddingLeft="5dp"
+                    android:layout_alignParentLeft="true">
+
+                    <TextView
+                        android:id="@+id/txt_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#416CDD"
+                        android:textSize="11sp"
+                        android:text="Federik Johanson"
+                        android:layout_marginTop="3dp" />
+
+                    <TextView
+                        android:id="@+id/txt_dep"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#7C7C7C"
+                        android:textSize="9sp"
+                        android:text="Head of Sales"
+                        android:layout_marginTop="5dp" />
+                    <TextView
+                        android:id="@+id/txt_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#7C7C7C"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        android:text="ABB"
+                        android:layout_marginTop="2dp" />
+
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="70dp"
+                    android:layout_toRightOf="@+id/lin_text"
+                    android:layout_alignParentRight="true">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/chevron"
+                    android:layout_centerInParent="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5dp"
+                android:layout_below="@id/lin_head"
+                android:layout_marginBottom="0dp"
+                android:background="#0060AA" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <!-- Your normal content view -->
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- We use a Toolbar so that our drawer can be displayed
+             in front of the action bar -->
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags = "scroll"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/my_awesome_toolbar"
+                android:layout_width="match_parent"
+                android:titleTextColor="@color/white"
+                app:title="@string/app_name"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/titlebar_color">
+
+                <include layout="@layout/toolbar_layout_two" />
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+        <!-- The rest of your content view -->
+        <android.support.v4.widget.NestedScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context=".ui.ConferenceAgendaSingleActivity">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/con_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="REDESIGNING SUPPLY CHAINS IN THE DIGITAL\nERA (Part 2)"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/titlebar_color"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:id="@+id/con_sub_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Container Supply Chain Conference"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="10dp" />
+
+                <LinearLayout
+                    android:id="@+id/lin_date"
+                    android:layout_below="@+id/txt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="#EBEBEB"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/calender"/>
+                    <TextView
+                        android:id="@+id/txt_date"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="April 25th 2017"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="20dp"
+                        android:background="@color/black"
+                        android:layout_marginLeft="@dimen/_5dp"
+                        android:layout_marginRight="@dimen/_5dp"
+                        android:visibility="gone"
+                        />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/diary"
+                        android:visibility="gone"/>
+                    <TextView
+                        android:layout_marginLeft="@dimen/_5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="09:00 - 10:00"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Now fully immersed in the digital era, as the fourth industrial revolution brings rap-idly evolving and disruptive technologies that will alter the fundamentals of global supply chains as we know it. Across the sector robotics, artificial intelligence, 3D printing, digital and nano-technologies are now taking hold.\n
+This real-time connectivity revolution will make global supply chains more effec-tive, diminishing the cost of trade, opening up new markets and driving economic growth. Now is the important time for the sector as everyone looks to retain a com-petitive advantage in this changing era? "
+                    android:layout_gravity="center"
+                    android:padding="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"/>
+
+                <com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/con_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    ext:documentView_insetPadding="15dp"
+                    ext:documentView_antialias="true"
+                    ext:documentView_cacheConfig="auto_quality"
+                    ext:documentView_hyphen="-"
+                    ext:documentView_maxLines="100"
+                    ext:documentView_reverse="false"
+                    ext:documentView_text=""
+                    ext:documentView_textAlignment="justified"
+                    ext:documentView_textColor="@android:color/black"
+                    ext:documentView_textFormat="plain"
+                    ext:documentView_textSize="15sp"
+                    ext:documentView_textSubPixel="true"
+                    ext:documentView_wordSpacingMultiplier="3.0" />
+
+                <TextView
+                    android:id="@+id/con_keypoints_title"
+                    android:layout_width="match_parent"
+                    android:background="#EBEBEB"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="KEYPOINTS"
+                    android:textAlignment="center"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Now fully immersed in the digital era, as the fourth industrial revolution brings rap-idly evolving and disruptive technologies that will alter the fundamentals of global supply chains as we know it. Across the sector robotics, artificial intelligence, 3D printing, digital and nano-technologies are now taking hold.\n
+This real-time connectivity revolution will make global supply chains more effec-tive, diminishing the cost of trade, opening up new markets and driving economic growth. Now is the important time for the sector as everyone looks to retain a com-petitive advantage in this changing era? "
+                    android:layout_gravity="center"
+                    android:padding="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"/>
+                <com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/con_keypoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    ext:documentView_insetPadding="15dp"
+                    ext:documentView_antialias="true"
+                    ext:documentView_cacheConfig="auto_quality"
+                    ext:documentView_hyphen="-"
+                    ext:documentView_maxLines="100"
+                    ext:documentView_reverse="false"
+                    ext:documentView_text=""
+                    ext:documentView_textAlignment="left"
+                    ext:documentView_textColor="@android:color/black"
+                    ext:documentView_textFormat="formatted"
+                    ext:documentView_textSize="15sp"
+                    ext:documentView_textSubPixel="true"
+                    ext:documentView_wordSpacingMultiplier="3.0" />
+
+                <TextView
+                    android:id="@+id/speaker_list_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="SPEAKERS FOR THIS SEMINAR:"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="#EBEBEB"
+                    android:textStyle="bold"/>
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:id="@+id/speaker_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/_5dp">
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_main"/>
+</android.support.v4.widget.DrawerLayout>

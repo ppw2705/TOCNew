@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rlt_user_profile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_140dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ss_logo" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_product_bg" />
+
+
+    <RelativeLayout
+        android:id="@+id/nav_rel_home"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:onClick="navClick">
+        <ImageView
+            android:id="@+id/nav_ico_home"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:src="@drawable/menu_circle"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_toRightOf="@+id/nav_ico_home"
+            android:id="@+id/nav_txt_home"
+            style="@style/DrawerText"
+            android:paddingLeft="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:text="HOME" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_product_bg" />
+
+
+    <RelativeLayout
+        android:id="@+id/nav_rel_events"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:onClick="navClick">
+        <ImageView
+            android:id="@+id/nav_ico_event"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:src="@drawable/menu_circle"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_toRightOf="@+id/nav_ico_event"
+            android:id="@+id/nav_txt_event"
+            style="@style/DrawerText"
+            android:paddingLeft="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:text="MY SEMINAR CALENDAR" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_product_bg" />
+
+    <RelativeLayout
+        android:id="@+id/nav_rel_ex_fav"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:onClick="navClick">
+        <ImageView
+            android:id="@+id/nav_ico_ex_fav"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:src="@drawable/menu_circle"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_toRightOf="@+id/nav_ico_ex_fav"
+            android:id="@+id/nav_txt_ex_fav"
+            style="@style/DrawerText"
+            android:paddingLeft="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:text="MY EXHIBITOR FAVORITES" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_product_bg" />
+
+    <RelativeLayout
+        android:id="@+id/nav_rel_europe"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:onClick="navClick">
+        <ImageView
+            android:id="@+id/nav_ico_europe"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:src="@drawable/menu_circle"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_toRightOf="@+id/nav_ico_europe"
+            android:id="@+id/nav_txt_europe"
+            style="@style/DrawerText"
+            android:paddingLeft="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:text="TOC EUROPE" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_product_bg" />
+
+    <RelativeLayout
+        android:id="@+id/nav_rel_america"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:onClick="navClick">
+        <ImageView
+            android:id="@+id/nav_ico_america"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:src="@drawable/menu_circle"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_toRightOf="@+id/nav_ico_america"
+            android:id="@+id/nav_txt_america"
+            style="@style/DrawerText"
+            android:paddingLeft="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:text="TOC AMERICAS" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_product_bg" />
+
+    <RelativeLayout
+        android:id="@+id/nav_rel_africa"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:onClick="navClick">
+        <ImageView
+            android:id="@+id/nav_ico_africa"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:src="@drawable/menu_circle"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_toRightOf="@+id/nav_ico_africa"
+            android:id="@+id/nav_txt_africa"
+            style="@style/DrawerText"
+            android:paddingLeft="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:text="TOC AFRICA" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_product_bg" />
+
+    <RelativeLayout
+        android:id="@+id/nav_rel_asia"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:onClick="navClick">
+        <ImageView
+            android:id="@+id/nav_ico_asia"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:src="@drawable/menu_circle"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_toRightOf="@+id/nav_ico_asia"
+            android:id="@+id/nav_txt_asia"
+            style="@style/DrawerText"
+            android:paddingLeft="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:text="TOC ASIA" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_product_bg" />
+
+    <RelativeLayout
+        android:id="@+id/nav_rel_contact"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:onClick="navClick">
+        <ImageView
+            android:id="@+id/nav_ico_contact"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:src="@drawable/menu_circle"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_toRightOf="@+id/nav_ico_contact"
+            android:id="@+id/nav_txt_contact"
+            style="@style/DrawerText"
+            android:paddingLeft="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:text="CONTACT US" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_product_bg" />
+
+
+
+
+
+</LinearLayout>

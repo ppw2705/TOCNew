@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_marginBottom="10dp">
+
+    <TableRow android:background="@color/white"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+        <ImageView
+            android:id="@+id/circular_img"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:src="@drawable/mmt_one"
+            android:layout_width="150dp"
+            android:padding="10dp" />
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                tools:text="PAUL HOLLOWAY"
+                android:gravity="left|center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/event_link"
+                android:layout_marginBottom="3dp" />
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_toRightOf="@+id/txt_name"
+                android:layout_marginLeft="5dp"
+                tools:text="(Event Director)"
+                android:gravity="left|center"
+                android:textSize="10sp"
+                android:layout_marginBottom="3dp" />
+
+            <TextView
+                android:id="@+id/txt_phone"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/txt_name"
+                android:layout_height="25dp"
+                tools:text="Tel: +44(0)2070174394"
+                android:gravity="left|center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="3dp" />
+
+            <ImageView
+                android:id="@+id/img_mail"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:layout_below="@+id/txt_phone"
+                android:src="@drawable/email" />
+
+            <TextView
+                android:id="@+id/txt_email"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/txt_phone"
+                android:layout_height="25dp"
+                android:text="Email"
+                android:layout_toRightOf="@+id/img_mail"
+                android:gravity="left|center"
+                android:textSize="14sp"
+                android:textColor="@color/mail_color"
+                android:layout_marginBottom="3dp"
+                android:paddingTop="5dp" />
+
+            <TextView
+                android:id="@+id/txt_email_name"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/txt_phone"
+                android:layout_toRightOf="@+id/txt_email"
+                android:layout_height="25dp"
+                android:text=" Paul"
+                android:gravity="left|center"
+                android:textSize="14sp"
+                android:textColor="@color/mail_color"
+                android:layout_marginBottom="3dp"
+                android:paddingTop="5dp" />
+
+            <ImageView
+                android:id="@+id/img_linkedin"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:layout_below="@+id/txt_email"
+                android:src="@drawable/in" />
+
+            <TextView
+                android:id="@+id/txt_linkedin_name"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/txt_email"
+                android:layout_toRightOf="@+id/txt_linkedin"
+                android:layout_height="25dp"
+                android:paddingTop="@dimen/_5dp"
+                android:text=" Paul"
+                android:gravity="left|center"
+                android:textSize="14sp"
+                android:textColor="@color/mail_color"
+                android:layout_marginBottom="3dp" />
+
+            <TextView
+                android:id="@+id/txt_linkedin"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:paddingTop="@dimen/_5dp"
+                android:text="Connect with"
+                android:gravity="left|center"
+                android:textSize="14sp"
+                android:textColor="@color/mail_color"
+                android:layout_alignBaseline="@+id/txt_linkedin_name"
+                android:layout_alignBottom="@+id/txt_linkedin_name"
+                android:layout_toRightOf="@+id/img_mail"
+                android:layout_toEndOf="@+id/img_mail" />
+        </RelativeLayout>
+    </TableRow>
+</TableLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_conference_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.geecon.toc.ui.ConferenceListActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/event_link"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white">
+
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:id="@+id/temp_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/my_awesome_toolbar"
+        android:background="@color/gray_product_bg"/>
+    <ScrollView
+        android:layout_below="@+id/temp_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#F5F5F5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/myImageView"
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/banner"
+                    android:layout_height="180dp" />
+
+                <RelativeLayout
+                    android:id="@+id/rel_banner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignLeft="@id/myImageView"
+                    android:layout_alignTop="@id/myImageView"
+                    android:layout_alignRight="@id/myImageView"
+                    android:layout_alignBottom="@id/myImageView">
+
+                    <ImageView
+                        android:id="@+id/ico_date"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/calender" />
+                    <TextView
+                        android:id="@+id/txt_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/ico_date"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="20dp"
+                        android:textSize="16sp"
+                        android:text="25 - 26 APRIL 2017"
+                        android:textColor="#FFF" />
+
+                    <ImageView
+                        android:id="@+id/ico_location"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/txt_date"
+                        android:src="@drawable/map" />
+
+                    <TextView
+                        android:id="@+id/txt_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="25sp"
+                        android:layout_below="@id/txt_date"
+                        android:layout_toRightOf="@+id/ico_location"
+                        android:textStyle="bold"
+                        android:text="MARINA BAY SANDS, SINGAPORE"
+                        android:textColor="#FFF" />
+
+                    <ImageView
+                        android:id="@+id/ico_info"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/txt_location"
+                        android:src="@drawable/info" />
+
+                    <TextView
+                        android:id="@+id/txt_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_below="@id/txt_location"
+                        android:layout_toRightOf="@+id/ico_info"
+                        android:textSize="16sp"
+                        android:text="CONFERENCE, EXHIBITION &amp; NETWORKING EVENT"
+                        android:textColor="#FFF" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/blue_strip"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/rel_banner"
+                    android:background="@color/blue_login" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="TOC ASIA 2017"
+                    android:textColor="@color/event_link"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:id="@+id/txt_title_con"/>
+                <TextView
+                    android:id="@+id/txt_con_content"
+                    android:layout_below="@+id/txt_title_con"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="THE PAN ASIA EVENT FOR PEOPLE WHO OWN, MOVE &amp; HANDLE CONTAINERISED CARGO"
+                    android:textColor="@color/event_link"
+                    android:textSize="17sp"
+                    />
+                <TextView
+                    android:id="@+id/txt_con_desc"
+                    android:layout_below="@+id/txt_con_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="TOC Asia is a market-focused conference &amp; exhibition which takes place annually in one of the world, key shipping hubs. This conference-led event is the complete container supply chain show for Asia, bringing together shippers, logistics providers, shipping lines, 3PLs, ports, terminals and other key audiences."
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+                <ListView
+                    android:layout_below="@+id/txt_con_desc"
+                    android:id="@+id/list_con"
+                    android:layout_width="match_parent"
+                    android:layout_height="620dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp" />
+
+            </RelativeLayout>
+            
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

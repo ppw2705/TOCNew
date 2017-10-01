@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <!-- Your normal content view -->
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- We use a Toolbar so that our drawer can be displayed
+             in front of the action bar -->
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags = "scroll"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/my_awesome_toolbar"
+                android:layout_width="match_parent"
+                android:titleTextColor="@color/white"
+                app:title="EXHIBITOR INFO"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/titlebar_color">
+
+                <include layout="@layout/toolbar_layout_two" />
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+        <!-- The rest of your content view -->
+        <android.support.v4.widget.NestedScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context=".ui.ExhibitionInfoActivity">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/img_exhibitor"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:src="@drawable/pro"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EBEBEB"
+                    android:layout_marginTop="20dp">
+                    <TextView
+                        android:id="@+id/txt_ex_name"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="IGUS GmbH"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#0061AA"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/txt_stand_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="STAND : F 12"
+                        android:layout_marginRight="10dp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true" />
+
+
+                </RelativeLayout>
+
+                <com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/txt_ex_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    ext:documentView_insetPadding="15dp"
+                    ext:documentView_antialias="true"
+                    ext:documentView_cacheConfig="auto_quality"
+                    ext:documentView_hyphen="-"
+                    ext:documentView_maxLines="100"
+                    ext:documentView_reverse="false"
+                    ext:documentView_text=""
+                    ext:documentView_textAlignment="left"
+                    ext:documentView_textColor="@android:color/black"
+                    ext:documentView_textFormat="formatted"
+                    ext:documentView_textSize="15sp"
+                    ext:documentView_textSubPixel="true"
+                    ext:documentView_wordSpacingMultiplier="3.0" />
+
+                <TextView
+                    android:id="@+id/press_release_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="PRESS RELEASES"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="#EBEBEB"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="visible"/>
+
+                <com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/txt_ex_press_release"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    ext:documentView_insetPadding="15dp"
+                    ext:documentView_antialias="true"
+                    ext:documentView_cacheConfig="auto_quality"
+                    ext:documentView_hyphen="-"
+                    ext:documentView_maxLines="100"
+                    ext:documentView_reverse="false"
+                    ext:documentView_text=""
+                    ext:documentView_textAlignment="left"
+                    ext:documentView_textColor="@android:color/black"
+                    ext:documentView_textFormat="formatted"
+                    ext:documentView_textSize="15sp"
+                    ext:documentView_textSubPixel="true"
+                    ext:documentView_wordSpacingMultiplier="3.0"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/products_list_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="PRODUCTS"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="#EBEBEB"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginTop="10dp"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:id="@+id/products_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/_5dp">
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_main" />
+</android.support.v4.widget.DrawerLayout>
+
+

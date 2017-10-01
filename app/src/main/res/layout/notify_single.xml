@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="112dp">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:id="@+id/lin_notify">
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="100dp">
+        <ImageView
+            android:id="@+id/notify_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/toc_notify_ico"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="110dp"
+    android:layout_weight="2"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <TextView
+        android:id="@+id/notify_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yesterday at 5:00pm"
+        android:layout_marginBottom="3dp"/>
+    <TextView
+        android:id="@+id/notify_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOC Events Worldwide"
+        android:textColor="@color/black"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/notify_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrations for TOC ASIA and TOC EUROPE is open..."
+        android:textSize="12sp"/>
+</LinearLayout>
+
+</LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#228B22"
+        android:layout_below="@+id/lin_notify"
+        />
+</RelativeLayout>

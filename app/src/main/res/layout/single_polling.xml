@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EBEBEB"
+        android:layout_marginBottom="15dp">
+    <TextView
+        android:id="@+id/txt_ques"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Compared to the way the news media have treated other presidents, have the news media been harder on Barack Obama, easier on Barack Obama, or have they treated him the same as other presidents?"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+    <!--<RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/txt_ques"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp">
+
+    </RadioGroup>-->
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/relAnsGroup"
+            android:layout_below="@+id/txt_ques"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp">
+
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_ques_ans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:visibility="gone"/>
+    <Button
+        android:layout_below="@+id/relAnsGroup"
+        android:id="@+id/submit_poll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Submit Poll"
+        android:background="#F9AA00"/>
+    </RelativeLayout>
+</RelativeLayout>

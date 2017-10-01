@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_thankyou"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/white"
+    tools:context="com.geecon.toc.ui.thankyou">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thank You for Completing"
+        android:layout_below="@+id/imageView"
+        android:gravity="center"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:id="@+id/t1"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Our Survey!"
+        android:layout_below="@+id/t1"
+        android:gravity="center"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:id="@+id/t2"
+        android:visibility="gone"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t2"
+        android:maxLines="5"
+        android:lines="5"
+        android:layout_marginTop="10dp"
+        android:text="Thank you for taking time out to participate in our survey. We truly value the information you have provided. Your responses are vital in helping TOC to provide a better experience that meets the highest standards of excellence. "
+        android:gravity="center"
+        android:id="@+id/t3"
+        />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/img8"
+        android:layout_marginTop="120dp"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/img10"
+        android:id="@+id/img2"
+        android:onClick="info2"
+
+        android:layout_below="@+id/t3"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

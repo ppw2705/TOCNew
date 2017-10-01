@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "437545282905",
+    "firebase_url": "https://tocapplication-e0086.firebaseio.com",
+    "project_id": "tocapplication-e0086",
+    "storage_bucket": "tocapplication-e0086.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437545282905:android:96af4aa34a2f5254",
+        "android_client_info": {
+          "package_name": "com.geecon.toc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437545282905-i70ankvekdfc7a37oct84vd7htf8j6uc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPFPcaRYXZ26pN920ab8vP63qHBi5kHl4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,332 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/rel_border"
+    android:elevation="@dimen/_5dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/event_link"
+        />
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:text="INDUSTRY OVERVIEW: INTELLIGENCE &amp; INSIGHT "
+        android:textColor="@color/event_link"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/lin_date"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/txt_title"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:background="#EBEBEB"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/calender" />
+
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="April 25th 2017"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:layout_marginRight="@dimen/_5dp"
+            android:background="@color/black"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/diary"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:gravity="center"
+            android:text="09:00 - 10:00"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_para"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin_date"
+        android:layout_margin="10dp"
+        android:lines="3"
+        android:text="The opening session of the Container Supply Chain Conference will set the scene by addressing the current state of industry, taking stock of the tumultuous incidents of 2016 but mainly looking ahead to where container shipping can journey to in..."
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <!--<com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/txt_para"
+        android:layout_below="@+id/lin_date"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ext:documentView_antialias="true"
+        ext:documentView_cacheConfig="auto_quality"
+        ext:documentView_hyphen="-"
+        ext:documentView_maxLines="100"
+        ext:documentView_reverse="false"
+        ext:documentView_text=""
+        ext:documentView_textAlignment="justified"
+        ext:documentView_textColor="@android:color/black"
+        ext:documentView_textFormat="plain"
+        ext:documentView_textSize="12sp"
+        ext:documentView_textSubPixel="true"
+        ext:documentView_wordSpacingMultiplier="3.0" />-->
+
+    <LinearLayout
+        android:id="@+id/buttons_lin_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_para"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:id="@+id/rel_addtocalendar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/circular_gray_border">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_toLeftOf="@+id/txt_addtocalendar"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ico_cal" />
+
+                <TextView
+                    android:id="@+id/txt_addtocalendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:text="ADD TO CALENDAR   "
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_toRightOf="@+id/txt_addtocalendar"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/next" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:id="@+id/rel_readMore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/circular_yellow_border">
+
+                <TextView
+                    android:id="@+id/txt_read_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:text="READ MORE   "
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_toRightOf="@+id/txt_read_more"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/next" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/speaker_title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/buttons_lin_new"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#EBEBEB"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="SPEAKERS" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/speaker_title"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/speaker_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/_5dp"></LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/buttons_lin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontalScrollView"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:background="#EBEBEB"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/poll_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circular_border"
+                android:drawableLeft="@drawable/poll"
+                android:drawablePadding="2dp"
+                android:elevation="@dimen/_5dp"
+                android:padding="@dimen/_5dp"
+                android:text="Take part in poll"
+                android:textAllCaps="true"
+                android:textColor="@color/blue_login"
+                android:textSize="11sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/ask_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circular_border"
+                android:drawableLeft="@drawable/q_a"
+                android:drawablePadding="2dp"
+                android:elevation="@dimen/_5dp"
+                android:padding="@dimen/_5dp"
+                android:text="Ask a question"
+                android:textAllCaps="true"
+                android:textColor="@color/blue_login"
+                android:textSize="11sp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/buttons_lin">
+
+        <TextView
+            android:id="@+id/rate_label"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"
+            android:text="Rate this Session"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true" />
+
+        <RatingBar
+            android:layout_centerInParent="true"
+            android:id="@+id/ratingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:progressBackgroundTint="@color/gray_transparent"
+            android:progressTint="@color/metallic_gold"
+            android:secondaryProgressTint="@color/metallic_gold"
+            android:stepSize="1.0"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rel_submit_rating"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/circular_black"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/txt_submit_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:text="SUBMIT "
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_toRightOf="@+id/txt_submit_rating"
+                android:layout_centerVertical="true"
+                android:src="@drawable/next" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

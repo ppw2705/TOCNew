@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_meet_the_team"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.geecon.toc.ui.MeetTheTeamActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/event_link"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white">
+
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:id="@+id/temp_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/my_awesome_toolbar"
+        android:background="@color/gray_product_bg"/>
+    <ScrollView
+        android:layout_below="@+id/temp_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/title_one"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/titlebar_color"
+        android:gravity="center"
+        android:layout_marginBottom="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EVENT MANAGEMENT &amp; SALES"
+            android:textSize="18dp"
+            android:gravity="left"
+            android:paddingLeft="12dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+    <ListView
+        android:layout_below="@+id/title_one"
+        android:id="@+id/team_list_one"
+        android:layout_width="wrap_content"
+        android:layout_height="520dp"
+        android:visibility="visible"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/title_two"
+        android:layout_below="@+id/team_list_one"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/mtt_titlebar_color"
+        android:gravity="center"
+        android:layout_marginBottom="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MARKETING"
+            android:textSize="18dp"
+            android:gravity="left"
+            android:paddingLeft="12dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+    <ListView
+        android:layout_below="@+id/title_two"
+        android:id="@+id/team_list_two"
+        android:layout_width="wrap_content"
+        android:layout_height="520dp"
+        android:visibility="gone"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/title_three"
+        android:layout_below="@+id/team_list_two"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/mtt_titlebar_color"
+        android:gravity="center"
+        android:layout_marginBottom="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OPERATIONS &amp; LOGISTICS"
+            android:textSize="18dp"
+            android:gravity="left"
+            android:paddingLeft="12dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+    <ListView
+        android:layout_below="@+id/title_three"
+        android:id="@+id/team_list_three"
+        android:layout_width="wrap_content"
+        android:layout_height="530dp"
+        android:visibility="gone"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/title_four"
+        android:layout_below="@+id/team_list_three"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/mtt_titlebar_color"
+        android:gravity="center"
+        android:layout_marginBottom="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CONFERENCE EDITORIAL"
+            android:textSize="18dp"
+            android:gravity="left"
+            android:paddingLeft="12dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+    <ListView
+        android:layout_below="@+id/title_four"
+        android:id="@+id/team_list_four"
+        android:layout_width="wrap_content"
+        android:layout_height="520dp"
+        android:visibility="gone"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/rel_border"
+    android:elevation="@dimen/_5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rel_calendar"
+        android:background="?android:attr/selectableItemBackground">
+        <RelativeLayout
+            android:id="@+id/lin_date_time"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="left|center"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/_5dp"
+            android:paddingRight="@dimen/_5dp">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/event_c_ico"
+                android:id="@+id/img_ico"/>
+            <TextView
+                android:layout_toRightOf="@+id/img_ico"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/txt_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="2017-06-01 04:00:00 to 2017-06-01 04:00:00" />
+            <ImageView
+                android:id="@+id/delete_event"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/delete"/>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_below="@+id/lin_date_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#EBEBEB"
+            android:gravity="center">
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/event_ico" />
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="@dimen/_5dp"
+                    android:id="@+id/txt_event_name"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOC - PORTWATCH 2017 : PRODUCTIVITY CONNECTIVITY &amp; BUSINESS MODELS"
+                    />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
